@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Kisser - Tristan Brown</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9fafb;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.2rem; opacity: 0.9; }
+
+        nav {
+            background: #fff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; }
+        nav a { color: #667eea; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: #764ba2; }
+
+        main { max-width: 860px; margin: 0 auto; padding: 3rem 2rem; }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: gap 0.2s;
+        }
+        .back-link:hover { gap: 0.7rem; }
+
+        .project-header { margin-bottom: 2rem; }
+        .project-header h2 { font-size: 2.2rem; color: #667eea; margin-bottom: 0.5rem; }
+        .project-header .subtitle { color: #666; font-size: 1.05rem; margin-bottom: 1rem; }
+
+        .project-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+        .tag {
+            background: #e0e7ff;
+            color: #667eea;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+
+        .project-body { background: white; border-radius: 10px; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.07); }
+
+        .project-body h3 {
+            font-size: 1.1rem;
+            color: #764ba2;
+            margin-top: 1.75rem;
+            margin-bottom: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.85rem;
+        }
+        .project-body h3:first-child { margin-top: 0; }
+        .project-body p { color: #444; margin-bottom: 0.5rem; }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .meta-item {
+            background: #f7fafc;
+            border-radius: 8px;
+            padding: 1rem;
+            border-left: 3px solid #667eea;
+        }
+        .meta-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 0.2rem; }
+        .meta-item .value { font-weight: 600; color: #333; }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul { flex-direction: column; gap: 1rem; }
+            header h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tristan Brown</h1>
+        <p>Game Design | Game Programming | Project Management</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="projects.html">My Projects</a></li>
+            <li><a href="skills.html">Languages/Skills</a></li>
+            <li><a href="index.html#contact">Contact Info</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <a href="projects.html" class="back-link">← Back to Projects</a>
+
+        <div class="project-header">
+            <h2>Dragon Kisser</h2>
+            <p class="subtitle">AAA-quality vertical slice — 30-person student team</p>
+            <div class="project-tags">
+                <span class="tag">Unreal Engine 5</span>
+                <span class="tag">C++</span>
+                <span class="tag">Prototyping</span>
+            </div>
+        </div>
+
+        <div class="meta-grid">
+            <div class="meta-item">
+                <div class="label">Engine</div>
+                <div class="value">Unreal Engine 5</div>
+            </div>
+            <div class="meta-item">
+                <div class="label">Team Size</div>
+                <div class="value">~30 people</div>
+            </div>
+            <div class="meta-item">
+                <div class="label">Role</div>
+                <div class="value">Gameplay / Programming</div>
+            </div>
+            <div class="meta-item">
+                <div class="label">Type</div>
+                <div class="value">Vertical Slice</div>
+            </div>
+        </div>
+
+        <div class="project-body">
+            <h3>Overview</h3>
+            <p>Dragon Kisser was a large-scale student team project aimed at producing a AAA-quality vertical slice. Working alongside roughly 30 collaborators across design, art, and engineering, the project pushed the team to operate with professional production standards.</p>
+
+            <h3>My Role</h3>
+            <p>Add details here about your specific contributions — what systems you built, what you programmed, what you designed, and how you collaborated with the rest of the team.</p>
+
+            <h3>What I Learned</h3>
+            <p>Add what skills or lessons you took away from this project — technical, collaborative, or production-related.</p>
+
+            <h3>Challenges</h3>
+            <p>Describe any significant challenges you personally faced and how you solved them.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tristan Brown. All rights reserved.</p>
+    </footer>
+</body>
+</html>

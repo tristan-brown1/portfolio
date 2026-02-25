@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Tristan Brown</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9fafb;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.2rem; opacity: 0.9; }
+
+        nav {
+            background: #fff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; }
+        nav a { color: #667eea; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: #764ba2; }
+        nav a.active { color: #764ba2; border-bottom: 2px solid #764ba2; padding-bottom: 2px; }
+
+        main { max-width: 1000px; margin: 0 auto; padding: 3rem 2rem; }
+
+        h2 { font-size: 2rem; margin-bottom: 0.5rem; color: #667eea; }
+        .page-subtitle { color: #666; margin-bottom: 3rem; font-size: 1.05rem; }
+
+        .skills-category { margin-bottom: 3rem; }
+        .skills-category h3 {
+            font-size: 1.2rem;
+            color: #764ba2;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e0e7ff;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.9rem;
+        }
+
+        .skills-list { display: flex; flex-direction: column; gap: 1rem; }
+
+        .skill-item {
+            background: white;
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+            border-left: 4px solid #667eea;
+        }
+        .skill-item h4 { color: #667eea; margin-bottom: 0.3rem; font-size: 1rem; }
+        .skill-item p { color: #555; font-size: 0.95rem; }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul { flex-direction: column; gap: 1rem; }
+            header h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tristan Brown</h1>
+        <p>Game Design | Game Programming | Project Management</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="projects.html">My Projects</a></li>
+            <li><a href="skills.html" class="active">Languages/Skills</a></li>
+            <li><a href="index.html#contact">Contact Info</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Languages & Skills</h2>
+        <p class="page-subtitle">A breakdown of my tools, languages, and areas of expertise.</p>
+
+        <div class="skills-category">
+            <h3>Game Development</h3>
+            <div class="skills-list">
+                <div class="skill-item">
+                    <h4>Unreal Engine 5</h4>
+                    <p>My primary engine. Used professionally in a 30-person team project (Dragon Kisser) and across multiple personal and coursework projects. Comfortable with Blueprints, level design, AI behavior trees, and working with motion capture data.</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Game Design</h4>
+                    <p>Experienced in designing player-focused gameplay systems, pacing levels, and iterating on mechanics through prototyping. Strong focus on player experience and feel.</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Level Design</h4>
+                    <p>Hands-on greyboxing and layout work in UE5. Designed levels from concept to playable prototype, including a full Chamber of Secrets recreation and the Path to Camelot campaign.</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Prototyping</h4>
+                    <p>Comfortable rapidly building proof-of-concept systems to test ideas before full implementation. Used extensively in team and solo projects.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-category">
+            <h3>Programming Languages</h3>
+            <div class="skills-list">
+                <div class="skill-item">
+                    <h4>C++</h4>
+                    <p>Used in Unreal Engine projects for gameplay systems and custom actor logic. Comfortable with core concepts including pointers, classes, and UE5's reflection system.</p>
+                </div>
+                <div class="skill-item">
+                    <h4>C#</h4>
+                    <p>Experience from Unity projects and coursework. Comfortable with object-oriented patterns common in game development contexts.</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Python</h4>
+                    <p>Used for scripting, automation, and coursework assignments. Comfortable with standard libraries and general problem solving.</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Java</h4>
+                    <p>Studied in academic coursework. Solid understanding of object-oriented programming fundamentals.</p>
+                </div>
+                <div class="skill-item">
+                    <h4>C</h4>
+                    <p>Coursework experience in low-level programming, memory management, and systems concepts.</p>
+                </div>
+                <div class="skill-item">
+                    <h4>GDScript</h4>
+                    <p>Used in Godot for personal projects. Comfortable with the basics of the engine and its scripting syntax.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-category">
+            <h3>Tools & Other Skills</h3>
+            <div class="skills-list">
+                <div class="skill-item">
+                    <h4>Maya</h4>
+                    <p>3D modeling and animation tool used in coursework and game projects. Experience with rigging, mesh editing, and exporting assets for use in Unreal Engine.</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Motion Capture</h4>
+                    <p>Hands-on experience capturing and cleaning motion capture data for use in game projects.</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Project Management & Team Coordination</h4>
+                    <p>Led student teams on multi-person game projects. Experience running standups, managing production pipelines, and keeping cross-disciplinary teams aligned and on schedule.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tristan Brown. All rights reserved.</p>
+    </footer>
+</body>
+</html>
