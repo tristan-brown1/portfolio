@@ -30,11 +30,10 @@
         .media-section > .section-label { color: #764ba2; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem; font-weight: 600; }
         .media-stack { display: flex; flex-direction: column; gap: 1.5rem; }
         .media-slot { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.07); }
-        .media-inner { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #1a1a2e; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .media-slot img, .media-slot video { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .media-placeholder { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; color: rgba(255,255,255,0.25); font-size: 0.9rem; text-align: center; padding: 2rem; }
+        .media-inner { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #1a1a2e; }
+        .media-inner iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; display: block; }
         .media-caption { padding: 0.6rem 1rem; font-size: 0.85rem; color: #888; border-top: 1px solid #f0f0f0; font-style: italic; }
-        .project-body { background: white; border-radius: 10px; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.07); }
+        .project-body { background: white; border-radius: 10px; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.07);  margin-bottom: 2rem;}
         .project-body h3 { color: #764ba2; margin-top: 1.75rem; margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem; }
         .project-body h3:first-child { margin-top: 0; }
         .project-body p { color: #444; margin-bottom: 0.5rem; }
@@ -72,50 +71,7 @@
             <div class="meta-item"><div class="label">Engine</div><div class="value">Unreal Engine 5</div></div>
             <div class="meta-item"><div class="label">Focus</div><div class="value">Level Design</div></div>
             <div class="meta-item"><div class="label">Deliverable</div><div class="value">Greybox Prototype</div></div>
-            <div class="meta-item"><div class="label">Type</div><div class="value">Solo / Coursework</div></div>
-        </div>
-
-        <div class="media-section">
-            <div class="section-label">Media</div>
-            <div class="media-stack">
-
-                <div class="media-slot">
-                    <div class="media-inner">
-                        <!-- <img src="chamber-1.gif" alt="Description"> -->
-                        <!-- <video src="chamber-1.mp4" autoplay loop muted playsinline></video> -->
-                        <div class="media-placeholder">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-                            <span>Add a GIF or video here</span>
-                        </div>
-                    </div>
-                    <div class="media-caption">Caption for clip 1 — e.g. "Full level walkthrough"</div>
-                </div>
-
-                <div class="media-slot">
-                    <div class="media-inner">
-                        <!-- <img src="chamber-2.gif" alt="Description"> -->
-                        <!-- <video src="chamber-2.mp4" autoplay loop muted playsinline></video> -->
-                        <div class="media-placeholder">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-                            <span>Add a GIF or video here</span>
-                        </div>
-                    </div>
-                    <div class="media-caption">Caption for clip 2 — e.g. "Entrance area detail"</div>
-                </div>
-
-                <div class="media-slot">
-                    <div class="media-inner">
-                        <!-- <img src="chamber-3.gif" alt="Description"> -->
-                        <!-- <video src="chamber-3.mp4" autoplay loop muted playsinline></video> -->
-                        <div class="media-placeholder">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-                            <span>Add a GIF or video here</span>
-                        </div>
-                    </div>
-                    <div class="media-caption">Caption for clip 3 — e.g. "Inner chamber"</div>
-                </div>
-
-            </div>
+            <div class="meta-item"><div class="label">Type</div><div class="value">Personal</div></div>
         </div>
 
         <div class="project-body">
@@ -128,6 +84,26 @@
             <h3>Challenges</h3>
             <p></p>
         </div>
+
+        <div class="media-section">
+            <div class="section-label">Media</div>
+            <div class="media-stack">
+
+                <div class="media-slot">
+                    <div class="media-inner">
+                        <iframe
+                            src="https://www.youtube.com/embed/Yq8lm5_wL34"
+                            title="Chamber of Secrets Greybox Level"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        
     </main>
     <footer><p>&copy; 2026 Tristan Brown. All rights reserved.</p></footer>
 </body>
