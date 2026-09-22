@@ -3,136 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dragon Kisser - Tristan Brown</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; line-height: 1.6; color: #333; background: #f9fafb; }
-        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 4rem 2rem; text-align: center; }
-        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        header p { font-size: 1.2rem; opacity: 0.9; }
-        nav { background: #fff; padding: 1rem 2rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-        nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; }
-        nav a { color: #667eea; text-decoration: none; font-weight: 500; transition: color 0.3s; }
-        nav a:hover { color: #764ba2; }
-        main { max-width: 860px; margin: 0 auto; padding: 3rem 2rem; }
-        .back-link { display: inline-flex; align-items: center; gap: 0.4rem; color: #667eea; text-decoration: none; font-weight: 500; margin-bottom: 2rem; transition: gap 0.2s; }
-        .back-link:hover { gap: 0.7rem; }
-        .project-header { margin-bottom: 2rem; }
-        .project-header h2 { font-size: 2.2rem; color: #667eea; margin-bottom: 0.5rem; }
-        .project-header .subtitle { color: #666; font-size: 1.05rem; margin-bottom: 1rem; }
-        .project-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
-        .tag { background: #e0e7ff; color: #667eea; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.85rem; }
-        .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
-        .meta-item { background: #f7fafc; border-radius: 8px; padding: 1rem; border-left: 3px solid #667eea; }
-        .meta-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 0.2rem; }
-        .meta-item .value { font-weight: 600; color: #333; }
-        .project-body { background: white; border-radius: 10px; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.07); margin-bottom: 2rem;}
-        .project-body h3 { color: #764ba2; margin-top: 1.75rem; margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem; }
-        .project-body h3:first-child { margin-top: 0; }
-        .project-body p { color: #444; margin-bottom: 1rem; }
-        .media-section { margin-bottom: 2rem; }
-        .media-section > .section-label { color: #764ba2; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem; font-weight: 600; }
-        .media-stack { display: flex; flex-direction: column; gap: 1.5rem; }
-        .media-slot { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.07); }
-        .media-inner { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #1a1a2e; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .media-slot img, .media-slot video { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .media-placeholder { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; color: rgba(255,255,255,0.25); font-size: 0.9rem; text-align: center; padding: 2rem; }
-        .media-caption { padding: 0.6rem 1rem; font-size: 0.85rem; color: #888; border-top: 1px solid #f0f0f0; font-style: italic; }
-        footer { background: #2d3748; color: white; text-align: center; padding: 2rem; margin-top: 4rem; }
-        @media (max-width: 768px) { nav ul { flex-direction: column; gap: 1rem; } header h1 { font-size: 2rem; } }
-    </style>
+    <title>Dragon Kisser — Tristan Brown</title>
+    <meta name="description" content="Case study: designing and leading a souls-like boss fight in Unreal Engine 5 with a 30-person student team.">
+    <meta property="og:title" content="Dragon Kisser — Tristan Brown">
+    <meta property="og:description" content="Designing and leading a souls-like boss fight in UE5 with a 30-person team.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://tristan-brown1.github.io/media/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Tristan Brown</h1>
-        <p>Game Design | Game Programming | Project Management</p>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">About Me</a></li>
-            <li><a href="projects.html">My Projects</a></li>
-            <li><a href="skills.html">Languages/Skills</a></li>
-            <li><a href="contact.html">Contact Info</a></li>
-        </ul>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <nav class="site-nav" aria-label="Main">
+        <div class="wrap">
+            <a class="brand" href="index.html">Tristan Brown</a>
+            <ul>
+                <li><a href="projects.html" aria-current="page">Work</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="resume" href="resume.pdf" target="_blank" rel="noopener">Résumé</a></li>
+            </ul>
+        </div>
     </nav>
-    <main>
-        <a href="projects.html" class="back-link">← Back to Projects</a>
 
-        <div class="project-header">
-            <h2>Dragon Kisser</h2>
-            <p class="subtitle">AAA-quality vertical slice — 30-person student team</p>
-            <div class="project-tags">
-                <span class="tag">Unreal Engine 5</span>
-                <span class="tag">C++</span>
-                <span class="tag">Prototyping</span>
-            </div>
-        </div>
+    <main id="main">
+        <div class="wrap">
+            <a class="back" href="projects.html">Back to all projects</a>
 
-        <div class="meta-grid">
-            <div class="meta-item"><div class="label">Engine</div><div class="value">Unreal Engine 5</div></div>
-            <div class="meta-item"><div class="label">Team Size</div><div class="value">~30 people</div></div>
-            <div class="meta-item"><div class="label">Role</div><div class="value">Gameplay / Programming</div></div>
-            <div class="meta-item"><div class="label">Type</div><div class="value">Vertical Slice</div></div>
-        </div>
+            <header class="cs-head">
+                <h1>Dragon Kisser</h1>
+                <p class="lede">A souls-like boss fight crossed with a dating sim, built as a vertical slice by a student team of about 30.</p>
+                <dl class="cs-facts">
+                    <div><dt>Role</dt><dd>Lead gameplay programmer & producer</dd></div>
+                    <div><dt>Team</dt><dd>~30 across design, art, and engineering</dd></div>
+                    <div><dt>Built with</dt><dd>Unreal Engine 5, C++</dd></div>
+                    <div><dt>Timeline</dt><dd>2025–2026</dd></div>
+                </dl>
+            </header>
 
-        <div class="project-body">
-            <h3>Overview</h3>
-            <p>Dragon Kisser is a large-scale student team project aimed at producing a high quality vertical slice. Working alongside 30 collaborators across design, art, and engineering, the project pushed the team to operate with professional production standards.</p>
-            <h3>My Role</h3>
-            <p>I worked as a Lead Gameplay Programmer and Producer on the project. I contributed to everything from the core systems design and implementation to refining boss attack animations. I also met at least weekly with each discipline individually to go over their goals and discuss what they needed to consistently meet their deadlines.</p>
-            <h3>What I Learned</h3>
-            <p>I learned just how important it is to design and implement systems that can scale, how important it is to find the fun quickly, and the power of consistent playtesting. We conducted playtests every Friday for the second portion of development and I learned very quickly how useful it is to see how players are interacting with your systems. I also learned the importance of transparency and following up when working with a large team. A lot can be accomplished with a small team if they are given regular stretch goals, feedback, and praise when those stretch goals are met. </p>
-            <h3>Challenges</h3>
-            <p>One of the biggest challenges we faced on the project is balancing the schedules of so many busy college students. At first the inconsistency was frustrating, but as time went on I have realized that this is actually a great opportunity for disciplines to blend and collaboration to strengthen even further. Programmers that have to spend a little time creating rough animations are able to communicate what they need more clearly and artists that have to spend time implementing their assets are much better at making assets that fit perfectly into the game's systems. </p>
-        </div>
+            <figure class="cs-hero">
+                <img src="media/March_2026.gif" alt="Player fighting the dragon boss in the arena, March 2026 build">
+            </figure>
 
-        <div class="media-section">
-            <div class="section-label">Media</div>
-            <div class="media-stack">
+            <section class="cs-section prose" aria-labelledby="overview">
+                <h2 id="overview">Overview</h2>
+                <p>Dragon Kisser set out to produce a high-quality vertical slice under professional production standards. I owned the core gameplay systems, from design through implementation, and refined the boss's attack animations until they read clearly and felt fair to fight.</p>
+                <p>Alongside that, I ran production: weekly one-on-ones with each discipline to track goals and unblock deadlines, and a playtest every Friday for the second half of development.</p>
+            </section>
 
-                <div class="media-slot">
-                    <div class="media-inner">
-                        <!-- To use a GIF, replace this comment block with: -->
-                        <!-- <img src="dragon-kisser-1.gif" alt="Gameplay overview"> -->
-                        <!-- To use an MP4, replace with: -->
-                        <!-- <video src="dragon-kisser-1.mp4" autoplay loop muted playsinline></video> -->
-                        <img src="media/March_2026.gif" alt="Description">
-                    </div>
-                    <div class="media-caption">Gameplay from March 2026</div>
-                </div>
-                
-                <div class="media-slot">
-                    <div class="media-inner">
-                        <!-- To use a GIF, replace this comment block with: -->
-                        <!-- <img src="dragon-kisser-1.gif" alt="Gameplay overview"> -->
-                        <!-- To use an MP4, replace with: -->
-                        <!-- <video src="dragon-kisser-1.mp4" autoplay loop muted playsinline></video> -->
-                        <img src="media/dragon-kisser-1.gif" alt="Description">
-                    </div>
-                    <div class="media-caption">Gameplay from December 2025</div>
+            <!-- ============ ATTACK BREAKDOWN ============
+                 Replace the attack names, frame counts, and notes with your real data.
+                 Each .bar takes --total (all frames); each .seg takes --f (its frames).
+                 Chart scale is 90 frames; change --max on .frames if an attack runs longer. -->
+            <section class="cs-section" aria-labelledby="attacks">
+                <div class="prose">
+                    <h2 id="attacks">Reading the boss</h2>
+                    <p>Every attack is a promise to the player: a windup that tells them what's coming, a short active window where the hitbox is live, and a recovery that gives them room to punish. Tuning those three numbers against each other is most of what makes a boss feel fair.</p>
                 </div>
 
-                <div class="media-slot">
-                    <div class="media-inner">
-                        <!-- <img src="dragon-kisser-2.gif" alt="Description"> -->
-                        <!-- <video src="dragon-kisser-2.mp4" autoplay loop muted playsinline></video> -->
-                        <img src="media/dragon-kisser-2.gif" alt="Description">
+                <p class="todo">Placeholder data. Swap in the real attacks and frame counts from your Anim Montages, then delete this note.</p>
+
+                <ul class="frame-legend">
+                    <li><span class="swatch windup"></span>Windup (telegraph)</li>
+                    <li><span class="swatch active"></span>Active (hitbox live)</li>
+                    <li><span class="swatch recovery"></span>Recovery (punish window)</li>
+                </ul>
+
+                <div class="frames">
+                    <div class="ruler" aria-hidden="true">
+                        <span style="left:0">0f</span>
+                        <span style="left:33.33%">30f / 0.5s</span>
+                        <span style="left:66.66%">60f / 1.0s</span>
+                        <span style="left:100%">90f / 1.5s</span>
                     </div>
-                    <div class="media-caption">Gameplay from December 2025</div>
+
+                    <div class="attack">
+                        <div class="attack-head">
+                            <h3>Tail sweep</h3>
+                            <span>58 frames at 60 fps</span>
+                        </div>
+                        <div class="bar" style="--total:58">
+                            <span class="seg windup" style="--f:28">28<span class="sr-only"> frames windup</span></span>
+                            <span class="seg active" style="--f:6">6<span class="sr-only"> frames active</span></span>
+                            <span class="seg recovery" style="--f:24">24<span class="sr-only"> frames recovery</span></span>
+                        </div>
+                        <p>The first attack players learn. A long, readable windup teaches the dodge timing the rest of the fight builds on.</p>
+                    </div>
+
+                    <div class="attack">
+                        <div class="attack-head">
+                            <h3>Charged bite</h3>
+                            <span>76 frames at 60 fps</span>
+                        </div>
+                        <div class="bar" style="--total:76">
+                            <span class="seg windup" style="--f:42">42<span class="sr-only"> frames windup</span></span>
+                            <span class="seg active" style="--f:4">4<span class="sr-only"> frames active</span></span>
+                            <span class="seg recovery" style="--f:30">30<span class="sr-only"> frames recovery</span></span>
+                        </div>
+                        <p>A delayed windup that punishes panic-rolling, balanced by the longest recovery in the moveset as a reward for waiting it out.</p>
+                    </div>
+
+                    <div class="attack">
+                        <div class="attack-head">
+                            <h3>Wing buffet</h3>
+                            <span>44 frames at 60 fps</span>
+                        </div>
+                        <div class="bar" style="--total:44">
+                            <span class="seg windup" style="--f:18">18<span class="sr-only"> frames windup</span></span>
+                            <span class="seg active" style="--f:10">10<span class="sr-only"> frames active</span></span>
+                            <span class="seg recovery" style="--f:16">16<span class="sr-only"> frames recovery</span></span>
+                        </div>
+                        <p>A fast, wide attack that pushes players back out of melee range and resets spacing.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ PLAYTEST ITERATION ============ -->
+            <section class="cs-section" aria-labelledby="iteration">
+                <div class="prose">
+                    <h2 id="iteration">What playtesting changed</h2>
+                    <p>Watching players every Friday showed us where the fight broke down faster than any design review could.</p>
                 </div>
 
-                <div class="media-slot">
-                    <div class="media-inner">
-                        <!-- <img src="dragon-kisser-3.gif" alt="Description"> -->
-                        <!-- <video src="dragon-kisser-3.mp4" autoplay loop muted playsinline></video> -->
-                        <img src="media/dragon-kisser-3.gif" alt="Description">
-                    </div>
-                    <div class="media-caption">Gameplay from September 2025</div>
-                </div>
+                <p class="todo">Tell one specific story here: what players kept doing, what you changed in response, and how the next playtest went. A number, like deaths to one attack dropping after a telegraph fix, makes it land.</p>
 
-            </div>
+                <div class="compare">
+                    <figure>
+                        <img src="media/dragon-kisser-3.gif" alt="Early build of the boss fight, September 2025" loading="lazy">
+                        <figcaption>September 2025</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="media/March_2026.gif" alt="Later build of the boss fight, March 2026" loading="lazy">
+                        <figcaption>March 2026</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="cs-section prose" aria-labelledby="leading">
+                <h2 id="leading">Leading a team of 30</h2>
+                <p>Balancing the schedules of so many busy college students was one of the hardest parts of the project. The inconsistency frustrated me at first, but it turned into a chance for disciplines to blend. Programmers who had to rough out animations learned to say exactly what they needed, and artists who implemented their own assets started building them to fit the game's systems.</p>
+                <p>The biggest lesson was how much a small group can accomplish with regular stretch goals, direct feedback, and real recognition when those goals are met. Transparency and consistent follow-up kept everyone pulling the same direction.</p>
+            </section>
+
+            <section class="cs-section prose" aria-labelledby="learned">
+                <h2 id="learned">What I'd carry forward</h2>
+                <p>Design systems that can scale, find the fun early, and put the game in front of players constantly. Every Friday playtest showed me something about how players were actually engaging with our systems that I couldn't have predicted from the editor.</p>
+            </section>
+
+            <section class="cs-section" aria-labelledby="progress">
+                <h2 id="progress">More from development</h2>
+                <div class="gallery">
+                    <figure>
+                        <img src="media/dragon-kisser-1.gif" alt="Boss fight gameplay, December 2025 build" loading="lazy">
+                        <figcaption>December 2025</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="media/dragon-kisser-2.gif" alt="Boss fight gameplay, December 2025 build" loading="lazy">
+                        <figcaption>December 2025</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="cs-section">
+                <a class="next" href="project-camelot.html">
+                    <div class="work-thumb">
+                        <img src="media/camelot-2.gif" alt="" loading="lazy">
+                    </div>
+                    <div>
+                        <span class="muted">Next project</span>
+                        <h2>The Path to Camelot</h2>
+                    </div>
+                </a>
+            </section>
         </div>
     </main>
-    <footer><p>&copy; 2026 Tristan Brown. All rights reserved.</p></footer>
+
+    <footer class="site-footer">
+        <div class="wrap">&copy; 2026 Tristan Brown</div>
+    </footer>
 </body>
 </html>

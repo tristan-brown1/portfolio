@@ -3,138 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destruction in Unreal powered by Houdini - Tristan Brown</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; line-height: 1.6; color: #333; background: #f9fafb; }
-        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 4rem 2rem; text-align: center; }
-        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        header p { font-size: 1.2rem; opacity: 0.9; }
-        nav { background: #fff; padding: 1rem 2rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-        nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; }
-        nav a { color: #667eea; text-decoration: none; font-weight: 500; transition: color 0.3s; }
-        nav a:hover { color: #764ba2; }
-        main { max-width: 860px; margin: 0 auto; padding: 3rem 2rem; }
-        .back-link { display: inline-flex; align-items: center; gap: 0.4rem; color: #667eea; text-decoration: none; font-weight: 500; margin-bottom: 2rem; transition: gap 0.2s; }
-        .back-link:hover { gap: 0.7rem; }
-        .project-header { margin-bottom: 2rem; }
-        .project-header h2 { font-size: 2.2rem; color: #667eea; margin-bottom: 0.5rem; }
-        .project-header .subtitle { color: #666; font-size: 1.05rem; margin-bottom: 1rem; }
-        .project-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
-        .tag { background: #e0e7ff; color: #667eea; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.85rem; }
-        .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
-        .meta-item { background: #f7fafc; border-radius: 8px; padding: 1rem; border-left: 3px solid #667eea; }
-        .meta-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 0.2rem; }
-        .meta-item .value { font-weight: 600; color: #333; }
-        .media-section { margin-bottom: 2rem; }
-        .media-section > .section-label { color: #764ba2; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem; font-weight: 600; }
-        .media-stack { display: flex; flex-direction: column; gap: 1.5rem; }
-        .media-slot { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.07); }
-        .media-inner { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #1a1a2e; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .media-slot img, .media-slot video { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .media-placeholder { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; color: rgba(255,255,255,0.25); font-size: 0.9rem; text-align: center; padding: 2rem; }
-        .media-caption { padding: 0.6rem 1rem; font-size: 0.85rem; color: #888; border-top: 1px solid #f0f0f0; font-style: italic; }
-        .project-body { background: white; border-radius: 10px; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.07);  margin-bottom: 2rem;}
-        .project-body h3 { color: #764ba2; margin-top: 1.75rem; margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem; }
-        .project-body h3:first-child { margin-top: 0; }
-        .project-body p { color: #444; margin-bottom: 0.5rem; }
-        footer { background: #2d3748; color: white; text-align: center; padding: 2rem; margin-top: 4rem; }
-        @media (max-width: 768px) { nav ul { flex-direction: column; gap: 1rem; } header h1 { font-size: 2rem; } }
-    </style>
+    <title>Destruction with Houdini — Tristan Brown</title>
+    <meta name="description" content="A Houdini Engine tool that makes any Unreal mesh destructible through Chaos physics.">
+    <meta property="og:title" content="Destruction with Houdini — Tristan Brown">
+    <meta property="og:description" content="A Houdini Engine tool that makes any Unreal mesh destructible through Chaos physics.">
+    <meta property="og:image" content="https://tristan-brown1.github.io/media/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Tristan Brown</h1>
-        <p>Game Design | Game Programming | Project Management</p>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">About Me</a></li>
-            <li><a href="projects.html">My Projects</a></li>
-            <li><a href="skills.html">Languages/Skills</a></li>
-            <li><a href="contact.html">Contact Info</a></li>
-        </ul>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <nav class="site-nav" aria-label="Main">
+        <div class="wrap">
+            <a class="brand" href="index.html">Tristan Brown</a>
+            <ul>
+                <li><a href="projects.html" aria-current="page">Work</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="resume" href="resume.pdf" target="_blank" rel="noopener">Résumé</a></li>
+            </ul>
+        </div>
     </nav>
-    <main>
-        <a href="projects.html" class="back-link">← Back to Projects</a>
 
-        <div class="project-header">
-            <h2>Destruction in Unreal powered by Houdini</h2>
-            <p class="subtitle">Personal project exploring Houdini Engine</p>
-            <div class="project-tags">
-                <span class="tag">Unreal Engine 5</span>
-                <span class="tag">C++</span>
-                <span class="tag">Prototyping</span>
-            </div>
-        </div>
+    <main id="main">
+        <div class="wrap">
+            <a class="back" href="projects.html">Back to all projects</a>
 
-        <div class="meta-grid">
-            <div class="meta-item"><div class="label">Engine</div><div class="value">Unreal Engine 5</div></div>
-            <div class="meta-item"><div class="label">Team Size</div><div class="value">Solo</div></div>
-            <div class="meta-item"><div class="label">Role</div><div class="value">Combat Designer</div></div>
-            <div class="meta-item"><div class="label">Type</div><div class="value">Personal Project</div></div>
-        </div>
+            <header class="cs-head">
+                <h1>Destruction with Houdini</h1>
+                <p class="lede">A personal research project connecting Houdini Engine to Unreal's Chaos physics so any mesh can become art-directable, destructible gameplay.</p>
+                <dl class="cs-facts">
+                    <div><dt>Role</dt><dd>Combat designer</dd></div>
+                    <div><dt>Team</dt><dd>Solo</dd></div>
+                    <div><dt>Built with</dt><dd>Unreal Engine 5, Houdini Engine, VEX</dd></div>
+                    <div><dt>Type</dt><dd>Personal project</dd></div>
+                </dl>
+            </header>
 
-        <div class="project-body">
-            <h3>Overview</h3>
-            <p>This project is the result of some personal exploration on how Houdini Engine can hook into Unreal's Chaos system for dynamic destruction gameplay.</p>
-            <h3>My Role</h3>
-            <p>I created a tool in Houdini that would take any mesh, cut that mesh into separate pieces using planes, and then return those pieces as their own meshes. I then used VEX to hook those meshes into Unreal's chaos system so that any mesh in Unreal could be made destructible and that destruction could be art directed.</p>
-            <h3>What I Learned</h3>
-            <p>I learned a lot how useful Houdini Engine is for creating tools that can enhance your environments. I also learned how those tools can also be used to create exciting gameplay moments. For testing purposes I set up a breakable glass window next to a breakable concrete wall and just with those two assets alone I could start to see how that level of interactivity could be very powerful.</p>
-            <h3>Challenges</h3>
-            <p>The biggest challenge that I faced was becoming familiar with VEX and how Unreal's chaos system is set up. I relied heavily on the official documentation for both tools, which proved thorough enough to answer nearly every question I encountered.</p>
-        </div>
+            <figure class="cs-hero">
+                <img src="media/destruction-2.gif" alt="Concrete wall splitting into chunks of different sizes depending on impact">
+            </figure>
 
-        <div class="media-section">
-            <div class="section-label">Media</div>
-            <div class="media-stack">
+            <section class="cs-section prose" aria-labelledby="overview">
+                <h2 id="overview">Overview</h2>
+                <p>This project came out of exploring how Houdini Engine can hook into Unreal's Chaos system to drive dynamic destruction during gameplay.</p>
+            </section>
 
-                <div class="media-slot">
-                    <div class="media-inner">
-                        <!-- To use a GIF, replace this comment block with: -->
-                        <!-- <img src="dragon-kisser-1.gif" alt="Gameplay overview"> -->
-                        <!-- To use an MP4, replace with: -->
-                        <!-- <video src="dragon-kisser-1.mp4" autoplay loop muted playsinline></video> -->
-                        <img src="media/destruction-1.gif" alt="Description">
-                    </div>
-                    <div class="media-caption">Learning about anchor points and testing the chaos system</div>
+            <section class="cs-section prose" aria-labelledby="my-role">
+                <h2 id="my-role">My role</h2>
+                <p>I built a Houdini tool that takes any mesh, cuts it into pieces using planes, and returns those pieces as separate meshes. I then used VEX to connect those pieces to Chaos, so any mesh in Unreal can be made destructible and its destruction can be art directed.</p>
+            </section>
+
+            <section class="cs-section prose" aria-labelledby="what-i-learned">
+                <h2 id="what-i-learned">What I learned</h2>
+                <p>Houdini Engine is extremely useful for building tools that enrich environments, and those same tools can create exciting gameplay moments. For testing, I placed a breakable glass window next to a breakable concrete wall, and those two assets alone showed how powerful that level of interactivity could be.</p>
+            </section>
+
+            <section class="cs-section prose" aria-labelledby="challenges">
+                <h2 id="challenges">Challenges</h2>
+                <p>The biggest challenge was learning VEX and understanding how Chaos is structured. I leaned heavily on the official documentation for both, which answered nearly every question I ran into.</p>
+            </section>
+
+            <section class="cs-section" aria-labelledby="media">
+                <h2 id="media">From development</h2>
+                <div class="gallery">
+                    <figure>
+                        <img src="media/destruction-1.gif" alt="Object breaking apart while testing anchor points" loading="lazy">
+                        <figcaption>Learning about anchor points and testing Chaos</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="media/destruction-4.gif" alt="Several different objects fracturing in the test level" loading="lazy">
+                        <figcaption>Getting the system working across many kinds of objects</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="media/destruction-3.gif" alt="Unique structure breaking differently under different impacts" loading="lazy">
+                        <figcaption>A unique structure responding to different impact types</figcaption>
+                    </figure>
                 </div>
+            </section>
 
-                <div class="media-slot">
-                    <div class="media-inner">
-                        <!-- <img src="dragon-kisser-2.gif" alt="Description"> -->
-                        <!-- <video src="dragon-kisser-2.mp4" autoplay loop muted playsinline></video> -->
-                        <img src="media/destruction-2.gif" alt="Description">
+            <section class="cs-section">
+                <a class="next" href="project-chamber.html">
+                    <div class="work-thumb">
+                        <img src="https://img.youtube.com/vi/Yq8lm5_wL34/hqdefault.jpg" alt="" loading="lazy">
                     </div>
-                    <div class="media-caption">Demo for how the wall is able to split into different size chunks depending on impact</div>
-                </div>
-
-                <div class="media-slot">
-                    <div class="media-inner">
-                        <!-- <img src="dragon-kisser-3.gif" alt="Description"> -->
-                        <!-- <video src="dragon-kisser-3.mp4" autoplay loop muted playsinline></video> -->
-                        <img src="media/destruction-4.gif" alt="Description">
+                    <div>
+                        <span class="muted">Next project</span>
+                        <h2>Chamber of Secrets greybox</h2>
                     </div>
-                    <div class="media-caption">Getting system working for all different kinds of objects in engine</div>
-                </div>
-
-                <div class="media-slot">
-                    <div class="media-inner">
-                        <!-- <img src="dragon-kisser-3.gif" alt="Description"> -->
-                        <!-- <video src="dragon-kisser-3.mp4" autoplay loop muted playsinline></video> -->
-                        <img src="media/destruction-3.gif" alt="Description">
-                    </div>
-                    <div class="media-caption">Demo for a unique structure responding to different impact types</div>
-                </div>
-
-                
-
-            </div>
+                </a>
+            </section>
         </div>
-
-        
     </main>
-    <footer><p>&copy; 2026 Tristan Brown. All rights reserved.</p></footer>
+
+    <footer class="site-footer">
+        <div class="wrap">&copy; 2026 Tristan Brown</div>
+    </footer>
 </body>
 </html>

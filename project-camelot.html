@@ -3,126 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Path to Camelot - Tristan Brown</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; line-height: 1.6; color: #333; background: #f9fafb; }
-        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 4rem 2rem; text-align: center; }
-        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        header p { font-size: 1.2rem; opacity: 0.9; }
-        nav { background: #fff; padding: 1rem 2rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-        nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; }
-        nav a { color: #667eea; text-decoration: none; font-weight: 500; transition: color 0.3s; }
-        nav a:hover { color: #764ba2; }
-        main { max-width: 860px; margin: 0 auto; padding: 3rem 2rem; }
-        .back-link { display: inline-flex; align-items: center; gap: 0.4rem; color: #667eea; text-decoration: none; font-weight: 500; margin-bottom: 2rem; transition: gap 0.2s; }
-        .back-link:hover { gap: 0.7rem; }
-        .project-header { margin-bottom: 2rem; }
-        .project-header h2 { font-size: 2.2rem; color: #667eea; margin-bottom: 0.5rem; }
-        .project-header .subtitle { color: #666; font-size: 1.05rem; margin-bottom: 1rem; }
-        .project-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
-        .tag { background: #e0e7ff; color: #667eea; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.85rem; }
-        .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
-        .meta-item { background: #f7fafc; border-radius: 8px; padding: 1rem; border-left: 3px solid #667eea; }
-        .meta-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 0.2rem; }
-        .meta-item .value { font-weight: 600; color: #333; }
-        .media-section { margin-bottom: 2rem; }
-        .media-section > .section-label { color: #764ba2; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem; font-weight: 600; }
-        .media-stack { display: flex; flex-direction: column; gap: 1.5rem; }
-        .media-slot { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.07); }
-        .media-inner { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #1a1a2e; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .media-slot img, .media-slot video { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .media-placeholder { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; color: rgba(255,255,255,0.25); font-size: 0.9rem; text-align: center; padding: 2rem; }
-        .media-caption { padding: 0.6rem 1rem; font-size: 0.85rem; color: #888; border-top: 1px solid #f0f0f0; font-style: italic; }
-        .project-body { background: white; border-radius: 10px; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.07);  margin-bottom: 2rem;}
-        .project-body h3 { color: #764ba2; margin-top: 1.75rem; margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem; }
-        .project-body h3:first-child { margin-top: 0; }
-        .project-body p { color: #444; margin-bottom: 0.5rem; }
-        footer { background: #2d3748; color: white; text-align: center; padding: 2rem; margin-top: 4rem; }
-        @media (max-width: 768px) { nav ul { flex-direction: column; gap: 1rem; } header h1 { font-size: 2rem; } }
-    </style>
+    <title>The Path to Camelot — Tristan Brown</title>
+    <meta name="description" content="Solo combat and level design project in Unreal Engine 5 with melee combat, pursuing enemy AI, and a companion character.">
+    <meta property="og:title" content="The Path to Camelot — Tristan Brown">
+    <meta property="og:description" content="Solo combat and level design project in Unreal Engine 5 with melee combat, pursuing enemy AI, and a companion character.">
+    <meta property="og:image" content="https://tristan-brown1.github.io/media/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Tristan Brown</h1>
-        <p>Game Design | Game Programming | Project Management</p>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">About Me</a></li>
-            <li><a href="projects.html">My Projects</a></li>
-            <li><a href="skills.html">Languages/Skills</a></li>
-            <li><a href="contact.html">Contact Info</a></li>
-        </ul>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <nav class="site-nav" aria-label="Main">
+        <div class="wrap">
+            <a class="brand" href="index.html">Tristan Brown</a>
+            <ul>
+                <li><a href="projects.html" aria-current="page">Work</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="resume" href="resume.pdf" target="_blank" rel="noopener">Résumé</a></li>
+            </ul>
+        </div>
     </nav>
-    <main>
-        <a href="projects.html" class="back-link">← Back to Projects</a>
 
-        <div class="project-header">
-            <h2>The Path to Camelot</h2>
-            <p class="subtitle">Combat and level design project in Unreal Engine 5</p>
-            <div class="project-tags">
-                <span class="tag">Unreal Engine 5</span>
-                <span class="tag">Blueprints</span>
-                <span class="tag">Combat Design</span>
-                <span class="tag">Level Design</span>
-            </div>
-        </div>
+    <main id="main">
+        <div class="wrap">
+            <a class="back" href="projects.html">Back to all projects</a>
 
-        <div class="meta-grid">
-            <div class="meta-item"><div class="label">Engine</div><div class="value">Unreal Engine 5</div></div>
-            <div class="meta-item"><div class="label">Team Size</div><div class="value">Solo (with assets from others)</div></div>
-            <div class="meta-item"><div class="label">Role</div><div class="value">Gameplay Programmer/ Combat Designer</div></div>
-            <div class="meta-item"><div class="label">Type</div><div class="value">Personal / Coursework</div></div>
-        </div>
-        
-        <div class="project-body">
-            <h3>Overview</h3>
-            <p>The Path to Camelot is a student project focused on combat and level design in Unreal Engine 5. I made this game using free or classmate made assets, Blueprints for the game logic, and Maya/Mixamo for animations</p>
-            <h3>My Role</h3>
-            <p>For this project I implemented a combat mechanic for the player and enemy AI that would pursue them if seen. I also implemented a third character that would follow the player as they make their way through the level. Finally, I designed and created the level for the player to explore.</p>
-            <h3>What I Learned</h3>
-            <p>While working on this project I learned about the many different elements of a combat system that combine to make it feel good. I learned about Animation Blueprints and how crucial properly timed animations are for a tight combat system. I learned a lot about Blueprints' strengths and where C++ becomes necessary for performance and complexity. I also learned about the tools available in Unreal for creating NPCs and Enemies for the player to interact with.</p>
-            <h3>Challenges</h3>
-            <p>One of the biggest challenges that I faced during this project was the timing of the animations. Creating a system where the enemy would attack quickly and the player would have the time and the tools to react was much more challenging than I thought it would be. That only made each iteration that much more satisfying as there was a significant difference each time I made a small tweak to the combat animations. </p>
-        </div>
+            <header class="cs-head">
+                <h1>The Path to Camelot</h1>
+                <p class="lede">A solo combat and level design project in Unreal Engine 5: melee combat, enemy AI that hunts the player on sight, and a companion who follows along.</p>
+                <dl class="cs-facts">
+                    <div><dt>Role</dt><dd>Gameplay programmer & combat designer</dd></div>
+                    <div><dt>Team</dt><dd>Solo, with shared and free assets</dd></div>
+                    <div><dt>Built with</dt><dd>Unreal Engine 5, Blueprints, Maya, Mixamo</dd></div>
+                    <div><dt>Type</dt><dd>Coursework</dd></div>
+                </dl>
+            </header>
 
-        <div class="media-section">
-            <div class="section-label">Media</div>
-            <div class="media-stack">
+            <figure class="cs-hero">
+                <img src="media/camelot-1.gif" alt="Enemy ragdolling after a melee hit in the forest level">
+            </figure>
 
-                <div class="media-slot">
-                    <div class="media-inner">
-                        <!-- <img src="camelot-1.gif" alt="Description"> -->
-                        <!-- <video src="camelot-1.mp4" autoplay loop muted playsinline></video> -->
-                        <img src="media/camelot-1.gif" alt="Description">
-                    </div>
-                    <div class="media-caption">Testing out how ragdolling feels in my environment and with the combat</div>
+            <section class="cs-section prose" aria-labelledby="overview">
+                <h2 id="overview">Overview</h2>
+                <p>The Path to Camelot is a student project focused on combat and level design. I built it with free and classmate-made assets, Blueprints for the game logic, and Maya and Mixamo for animation.</p>
+            </section>
+
+            <section class="cs-section prose" aria-labelledby="my-role">
+                <h2 id="my-role">My role</h2>
+                <p>I implemented the player's melee combat and enemy AI that pursues the player once it spots them. I also built a companion character who follows the player through the level, and I designed and built the level itself.</p>
+            </section>
+
+            <section class="cs-section prose" aria-labelledby="tuning-the-timing">
+                <h2 id="tuning-the-timing">Tuning the timing</h2>
+                <p>The hardest part was animation timing. I wanted enemies that attacked quickly while still giving the player the time and the tools to react, and that balance was much harder to strike than I expected.</p>
+                <p>It made every iteration more satisfying, though. Small tweaks to the combat animations produced big differences in how the fight felt.</p>
+            </section>
+
+            <section class="cs-section prose" aria-labelledby="what-i-learned">
+                <h2 id="what-i-learned">What I learned</h2>
+                <p>I learned how many separate elements combine to make combat feel good, and how much of that depends on Animation Blueprints and precisely timed animations. I also learned where Blueprints are strong and where C++ becomes necessary for performance and complexity, along with the tools Unreal provides for building NPCs and enemies.</p>
+            </section>
+
+            <section class="cs-section" aria-labelledby="media">
+                <h2 id="media">From development</h2>
+                <div class="gallery">
+                    <figure>
+                        <img src="media/camelot-2.gif" alt="Player surprised by an enemy ambush on the path" loading="lazy">
+                        <figcaption>Setting up encounters that surprise players and test their skills</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="media/camelot-3.gif" alt="Sword swings testing melee collision against an enemy" loading="lazy">
+                        <figcaption>Working out collision detection for melee combat</figcaption>
+                    </figure>
                 </div>
+            </section>
 
-                <div class="media-slot">
-                    <div class="media-inner">
-                        <!-- <img src="camelot-2.gif" alt="Description"> -->
-                        <!-- <video src="camelot-2.mp4" autoplay loop muted playsinline></video> -->
-                        <img src="media/camelot-2.gif" alt="Description">
+            <section class="cs-section">
+                <a class="next" href="project-destruction.html">
+                    <div class="work-thumb">
+                        <img src="media/destruction-2.gif" alt="" loading="lazy">
                     </div>
-                    <div class="media-caption">Setting up interesting enemy encounters that surprise the players and test their skills</div>
-                </div>
-
-                <div class="media-slot">
-                    <div class="media-inner">
-                        <!-- <img src="camelot-3.gif" alt="Description"> -->
-                        <!-- <video src="camelot-3.mp4" autoplay loop muted playsinline></video> -->
-                        <img src="media/camelot-3.gif" alt="Description">
+                    <div>
+                        <span class="muted">Next project</span>
+                        <h2>Destruction with Houdini</h2>
                     </div>
-                    <div class="media-caption">Figuring out the collision detection for melee combat in Unreal</div>
-                </div>
-
-            </div>
+                </a>
+            </section>
         </div>
-
-        
     </main>
-    <footer><p>&copy; 2026 Tristan Brown. All rights reserved.</p></footer>
+
+    <footer class="site-footer">
+        <div class="wrap">&copy; 2026 Tristan Brown</div>
+    </footer>
 </body>
 </html>

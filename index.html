@@ -3,210 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tristan Brown - Game Developer</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+    <title>Tristan Brown — Gameplay & Combat Designer</title>
+    <meta name="description" content="Gameplay and combat designer building boss fights, enemy AI, and gameplay systems in Unreal Engine 5 and C++.">
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
+    <meta property="og:title" content="Tristan Brown — Gameplay & Combat Designer">
+    <meta property="og:description" content="Boss fights, enemy AI, and combat systems in Unreal Engine 5.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tristan-brown1.github.io/">
+    <meta property="og:image" content="https://tristan-brown1.github.io/media/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
 
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        header p { font-size: 1.2rem; opacity: 0.9; }
-
-        nav {
-            background: #fff;
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; }
-        nav a { color: #667eea; text-decoration: none; font-weight: 500; transition: color 0.3s; }
-        nav a:hover { color: #764ba2; }
-        nav a.active { color: #764ba2; border-bottom: 2px solid #764ba2; padding-bottom: 2px; }
-
-        main { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        section { margin: 4rem 0; }
-        h2 { font-size: 2rem; margin-bottom: 1.5rem; color: #667eea; }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 2rem;
-            align-items: center;
-        }
-        .profile-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto;
-            display: block;
-        }
-
-        /* Projects preview on homepage */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        .project-card {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            cursor: pointer;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
-        .project-card h3 { color: #667eea; margin-bottom: 0.5rem; }
-        .project-card p { color: #666; margin-bottom: 1rem; }
-        .project-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-        .tag {
-            background: #e0e7ff;
-            color: #667eea;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.85rem;
-        }
-
-        .view-all-btn {
-            display: block;
-            width: fit-content;
-            margin: 2rem auto 0;
-            background: #667eea;
-            color: white;
-            padding: 0.75rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background 0.3s;
-            text-align: center;
-        }
-        .view-all-btn:hover { background: #764ba2; }
-
-        .contact-links { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
-        .contact-btn {
-            background: #667eea;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-        .contact-btn:hover { background: #764ba2; }
-
-        footer {
-            background: #2d3748;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-
-        @media (max-width: 768px) {
-            .about-content { grid-template-columns: 1fr; }
-            nav ul { flex-direction: column; gap: 1rem; }
-            header h1 { font-size: 2rem; }
-        }
-    </style>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Tristan Brown</h1>
-        <p>Game Design | Game Programming | Project Management</p>
-    </header>
+    <a class="skip" href="#main">Skip to content</a>
 
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active">About Me</a></li>
-            <li><a href="projects.html">My Projects</a></li>
-            <li><a href="skills.html">Languages/Skills</a></li>
-            <li><a href="contact.html">Contact Info</a></li>
-        </ul>
+    <nav class="site-nav" aria-label="Main">
+        <div class="wrap">
+            <a class="brand" href="index.html">Tristan Brown</a>
+            <ul>
+                <li><a href="projects.html">Work</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!-- Add your résumé to the repo root as resume.pdf -->
+                <li><a class="resume" href="resume.pdf" target="_blank" rel="noopener">Résumé</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <img src="media/profile_pic.jpg" alt="Tristan Brown" class="profile-image">
-                <div>
-                    <p>Gameplay Designer & Programmer with hands-on experience in Unreal Engine 5, specializing in player-focused gameplay, combat systems, and AI behaviors. Focused on building responsive combat, engaging encounters, and cohesive gameplay experiences using C++ and Blueprints. Experienced in leading cross-disciplinary teams, driving iteration through playtesting, and refining systems to improve pacing, difficulty, and overall player experience. Passionate about creating memorable gameplay and delivering polished, immersive games.</p>
+    <main id="main">
+        <header class="hero">
+            <div class="hero-media">
+                <!-- swapping this for an export of a 15–30s reel as MP4 and swap this img for:
+                     <video src="media/reel.mp4" poster="media/reel-poster.jpg" autoplay loop muted playsinline></video> -->
+                <img src="media/March_2026.gif" alt="">
+            </div>
+            <div class="wrap hero-copy">
+                <h1>Tristan<br>Brown</h1>
+                <p class="pitch">Gameplay and combat designer. I build boss fights, enemy AI, and the systems that make them feel good to fight, in Unreal Engine 5 and C++.</p>
+                <div class="actions">
+                    <a class="btn btn-primary" href="project-dragon-kisser.html">See the Dragon Kisser breakdown</a>
+                    <a class="btn btn-ghost" href="mailto:2tristanbrown@gmail.com">Email me</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="section" id="work" aria-labelledby="work-title">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2 id="work-title">Selected work</h2>
+                    <a class="text-link" href="projects.html">All projects</a>
+                </div>
+
+                <a class="featured" href="project-dragon-kisser.html">
+                    <div class="featured-media">
+                        <img src="media/March_2026.gif" alt="Player dodging a dragon boss's attack in Dragon Kisser" loading="lazy">
+                    </div>
+                    <div>
+                        <h3>Dragon Kisser</h3>
+                        <p>A souls-like boss fight crossed with a dating sim. I led gameplay programming and production for a student team of about 30, running weekly check-ins with every discipline and a playtest every Friday.</p>
+                        <dl class="facts">
+                            <dt>Role</dt><dd>Lead gameplay programmer & producer</dd>
+                            <dt>Team</dt><dd>~30 people</dd>
+                            <dt>Built with</dt><dd>Unreal Engine 5, C++</dd>
+                        </dl>
+                        <span class="more">Read the breakdown</span>
+                    </div>
+                </a>
+
+                <div class="work-grid">
+                    <a class="work-item" href="project-camelot.html">
+                        <div class="work-thumb">
+                            <img src="media/camelot-2.gif" alt="Knight encountering enemies along a forest path" loading="lazy">
+                        </div>
+                        <h3>The Path to Camelot</h3>
+                        <p>Solo combat and level design project: melee combat, enemy AI that pursues on sight, and a companion who follows the player through the level.</p>
+                        <ul class="tags"><li>Combat design</li><li>Level design</li><li>Blueprints</li></ul>
+                    </a>
+
+                    <a class="work-item" href="project-destruction.html">
+                        <div class="work-thumb">
+                            <img src="media/destruction-2.gif" alt="Concrete wall breaking into chunks of different sizes on impact" loading="lazy">
+                        </div>
+                        <h3>Destruction with Houdini</h3>
+                        <p>A Houdini tool that slices any mesh into art-directable pieces and hooks them into Unreal's Chaos physics for destructible gameplay.</p>
+                        <ul class="tags"><li>Houdini Engine</li><li>VEX</li><li>Chaos</li></ul>
+                    </a>
+
+                    <a class="work-item" href="project-chamber.html">
+                        <div class="work-thumb">
+                            <img src="https://img.youtube.com/vi/Yq8lm5_wL34/hqdefault.jpg" alt="Greybox view of a large stone chamber" loading="lazy">
+                        </div>
+                        <h3>Chamber of Secrets greybox</h3>
+                        <p>A level design study from the Hogwarts Legacy bathroom down to the innermost chamber, built around wayfinding, sightlines, and pacing.</p>
+                        <ul class="tags"><li>Level design</li><li>Greyboxing</li></ul>
+                    </a>
+
+                    <a class="work-item" href="project-cosmo.html">
+                        <div class="work-thumb">
+                            <!-- Swap for a gameplay screenshot when i have one: <img src="media/cosmo-1.jpg" alt="..."> -->
+                            <div class="thumb-type">Shipped on iOS<br>and Google Play</div>
+                        </div>
+                        <h3>Cosmo's Challenge</h3>
+                        <p>A swipe-to-throw football game used for competitions at university tailgates. I led post-release debugging and kept builds passing store review.</p>
+                        <ul class="tags"><li>Mobile</li><li>Unreal Engine 5</li><li>Blueprints</li></ul>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section id="projects">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <a href="project-dragon-kisser.html" class="project-card">
-                    <h3>Dragon Kisser</h3>
-                    <p>Souls-like boss fight meets dating sim student project in Unreal Engine 5.</p>
-                    <div class="project-tags">
-                        <span class="tag">Prototyping</span>
-                        <span class="tag">C++</span>
-                        <span class="tag">Unreal Engine 5</span>
-                    </div>
-                </a>
-                <a href="project-camelot.html" class="project-card">
-                    <h3>The Path to Camelot</h3>
-                    <p>A combat and level design student project built in Unreal Engine 5 using Blueprints.</p>
-                    <div class="project-tags">
-                        <span class="tag">Unreal Engine 5</span>
-                        <span class="tag">Blueprints</span>
-                        <span class="tag">Combat Design</span>
-                    </div>
-                </a>
-                <a href="project-chamber.html" class="project-card">
-                    <h3>Chamber of Secrets Greybox</h3>
-                    <p>Greyboxed level spanning from the Hogwarts Legacy bathroom to the innermost room of the Chamber of Secrets from the films.</p>
-                    <div class="project-tags">
-                        <span class="tag">Level Design</span>
-                        <span class="tag">Unreal Engine 5</span>
-                        <span class="tag">Prototyping</span>
-                    </div>
-                </a>
-                <a href="project-cosmo.html" class="project-card">
-                    <h3>Cosmo's Challenge</h3>
-                    <p>Unreal Engine 5 mobile game used to collect data for University tailgate events.</p>
-                    <div class="project-tags">
-                        <span class="tag">Mobile Development</span>
-                        <span class="tag">Blueprints</span>
-                        <span class="tag">Unreal Engine 5</span>
-                    </div>
-                </a>
+        <section class="section" id="about" aria-labelledby="about-title">
+            <div class="wrap about">
+                <img src="media/profile_pic.jpg" alt="Tristan Brown">
+                <div>
+                    <h2 id="about-title">About me</h2>
+                    <p>I'm a game developer with a B.S. in Computer Science (Animation & Games) from BYU. My focus is combat: how an attack reads, how long a player has to react, and how an encounter teaches its own rules.</p>
+                    <p>I work across design and code, using C++ where systems need to scale and Blueprints where iteration speed matters most. I've led a 30-person team as producer, and today I teach game development to students remotely at Game-U.</p>
+                </div>
             </div>
-            <a href="projects.html" class="view-all-btn">View All Projects →</a>
         </section>
 
-        <section id="contact">
-            <h2>Get In Touch</h2>
-            <div class="contact-links">
-                <a href="mailto:2tristanbrown@gmail.com" class="contact-btn">Email Me</a>
-                <a href="https://github.com/tristan-brown1" class="contact-btn" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/tristan-brown-406975284/" class="contact-btn" target="_blank">LinkedIn</a>
+        <section class="section" id="contact" aria-labelledby="contact-title">
+            <div class="wrap">
+                <h2 id="contact-title">Get in touch</h2>
+                <a class="big-link" href="mailto:2tristanbrown@gmail.com">2tristanbrown@gmail.com</a>
+                <ul class="contact-links">
+                    <li><a class="text-link" href="https://www.linkedin.com/in/tristan-brown-406975284/" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a class="text-link" href="https://github.com/tristan-brown1" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a class="text-link" href="resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a></li>
+                </ul>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Tristan Brown. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="wrap">&copy; 2026 Tristan Brown</div>
     </footer>
 </body>
 </html>
