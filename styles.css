@@ -193,6 +193,20 @@ h3 { font-size: 1.6rem; font-weight: 600; line-height: 1.1; }
   margin-top: .6rem; font-size: .92rem; color: var(--ember);
 }
 
+/* ---------- Game jams / itch.io callout ---------- */
+.jams {
+  display: grid; grid-template-columns: 1fr auto; gap: 1.25rem 2.5rem; align-items: center;
+  margin-top: 4.5rem; padding: clamp(1.5rem, 4vw, 2.5rem);
+  background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--ember);
+}
+.jams h2, .jams h3 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); line-height: 1.05; }
+.jams p { color: var(--muted); max-width: 52ch; margin-top: .5rem; }
+.jams .btn { white-space: nowrap; }
+@media (max-width: 860px) {
+  .jams { grid-template-columns: 1fr; }
+  .jams .btn { justify-self: start; }
+}
+
 /* ---------- About ---------- */
 .about { display: grid; grid-template-columns: 220px 1fr; gap: clamp(1.5rem, 5vw, 3.5rem); align-items: start; }
 .about img { width: 220px; aspect-ratio: 1; object-fit: cover; border: 1px solid var(--line); }
